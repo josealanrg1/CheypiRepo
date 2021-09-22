@@ -5,6 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+
+
+                sh '''
+                    pwd
+                    whoami
+                    ls -ltrah
+                '''
+
             }
         }
         stage('Test') {
@@ -14,8 +22,24 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+
+
                 echo 'Deploying....'
             }
         }
     }
+
 }
+
+                echo 'Deploying.....'
+                sh '''
+                    echo "HELLO WORLD"
+                    sh new_script.sh
+                '''
+            }
+        }
+    }
+}
+
+}
+
