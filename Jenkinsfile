@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
 
+
                 sh '''
                     pwd
                     whoami
@@ -22,10 +23,12 @@ pipeline {
         stage('Deploy') {
             steps {
 
+
                 echo 'Deploying....'
             }
         }
     }
+
 }
 
                 echo 'Deploying.....'
@@ -36,5 +39,7 @@ pipeline {
             }
         }
     }
+}
+
 }
 
